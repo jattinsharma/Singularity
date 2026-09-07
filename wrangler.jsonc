@@ -2,9 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "singularity",
   "compatibility_date": "2026-03-01",
-  "pages_build_output_dir": "dist",
   "assets": {
-    "directory": "./dist",
+    "directory": "./frontend/dist",
     "not_found_handling": "single-page-application"
   }
 }
