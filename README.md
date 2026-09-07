@@ -68,9 +68,23 @@ The frontend will be available at `http://localhost:5173` (or another port if 51
 - The frontend scales the satellite positions from kilometers to the Three.js scene units based on Earth's radius.
 - For a more realistic visualization, you could add textures to the Earth and improve the satellite representation.
 
+## Cloudflare Pages Deployment
+
+The frontend is ready for zero-config deployment on **Cloudflare Pages**:
+
+1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
+2. Select repository: `jattinsharma/Singularity`.
+3. Configure build settings:
+   - **Framework preset**: `Vite`
+   - **Root directory**: `frontend`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+4. Click **Save and Deploy**. Every subsequent `git push` to `main` will automatically build and deploy the updated application.
+
 ## Future Enhancements
 - Implement actual Store-Carry-Forward routing logic in the backend.
 - Add UI controls to adjust simulation parameters (altitude, inclination, number of satellites, etc.).
 - Improve the visual fidelity with textures, atmospheric scattering, and better satellite models.
 - Implement packet visualization to show data routing between satellites.
+
 
